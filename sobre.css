@@ -1,0 +1,119 @@
+/* ===========================
+   SOBRE — CAPA
+=========================== */
+
+.qs-hero {
+  margin-top: 120px;
+  height: 35vh;
+  min-height: 280px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.qs-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("img/Coletivo-1.JPEG") center center / cover no-repeat;
+  filter: brightness(0.8);
+}
+
+/* ===========================
+   SOBRE — TEXTO
+=========================== */
+
+.qs-text {
+  padding: 80px 40px;
+  background: #000;
+}
+
+.qs-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.qs-container h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Padronizando espaçamento entre todos os elementos do texto */
+.qs-container p,
+.qs-container img,
+.qs-pitching-row {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: justify;
+}
+
+.qs-img-wide {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* ===========================
+   SOBRE — PITCHING
+=========================== */
+
+.qs-pitching-row {
+  display: flex;
+  gap: 4px;
+  margin: 0; /* removemos qualquer margem extra */
+}
+
+.qs-pitching-row img {
+  width: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .qs-pitching-row {
+    flex-direction: column;
+  }
+
+  .qs-pitching-row img {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   BOTÃO DE CATÁLOGO
+=========================== */
+
+.qs-catalog {
+  padding-top: 10px; /* espaçamento confortável do último parágrafo */
+  text-align: center;
+}
+
+.qs-catalog-btn {
+  display: inline-block;
+  padding: 18px 28px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.qs-catalog-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-email:hover {
+  border-bottom: 1px solid #fff;
+}

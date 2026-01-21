@@ -1,0 +1,86 @@
+/* ===========================
+   PÁGINA VIREI PLAYBOY? - CARD
+=========================== */
+.virei-playboy-page {
+  background-color: #000;
+  color: #fff;
+  padding: 160px 20px 80px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.vp-card {
+  background-color: #111;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vp-img img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #fff;
+}
+
+.vp-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.vp-detalhes p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.vp-detalhes p:last-of-type {
+  margin-bottom: 10px; /* espaço entre duração e descrição */
+}
+
+.vp-descricao p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.vp-itens {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-email:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .vp-card {
+    padding: 15px;
+  }
+
+  .vp-title {
+    font-size: 2rem;
+  }
+
+  .vp-descricao p,
+  .vp-itens {
+    font-size: 0.95rem;
+  }
+}

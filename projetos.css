@@ -1,0 +1,189 @@
+/* ===========================
+   SEÇÃO PROJETOS
+=========================== */
+.projetos-section {
+  padding: 30px 20px 40px; /* topo e bottom menores para reduzir espaço entre seções */
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.projetos-section:first-of-type {
+  padding-top: 120px; /* topo um pouco maior só na primeira seção */
+}
+
+.projetos-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px; /* reduz o gap abaixo do título */
+  color: #ffffff;
+}
+
+/* ===========================
+   GRID DE PROJETOS
+=========================== */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   CARD DE CADA PROJETO
+=========================== */
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #111;
+  border-radius: 16px;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.35);
+  text-decoration: none; /* remove underline */
+  color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  background: #161616;
+}
+
+/* ===========================
+   IMAGEM DO PROJETO
+=========================== */
+.projeto-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid #222;
+  background: #1d1d1d;
+}
+
+.projeto-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover .projeto-img img {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   TÍTULOS E TEXTOS
+=========================== */
+.projeto-card h3 {
+  text-align: center;
+  margin: 12px 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.projeto-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #dcdcdc;
+}
+
+.projeto-card ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #dcdcdc;
+}
+
+.projeto-card li {
+  margin-bottom: 6px;
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-email:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width: 768px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .projeto-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .projeto-card p,
+  .projeto-card li {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===========================
+   RESPONSIVO - PROJETOS.CSS
+=========================== */
+@media (max-width: 1024px) {
+  .projetos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projeto-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .projeto-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projetos-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .projeto-card h3 {
+    font-size: 1rem;
+  }
+
+  .projeto-card p,
+  .projeto-card li {
+    font-size: 0.9rem;
+  }
+
+  .projeto-img {
+    height: 150px;
+  }
+}

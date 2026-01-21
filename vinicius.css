@@ -1,0 +1,233 @@
+/* ===========================
+   BLOCO 1 — FOTO + NOME + FUNÇÃO
+=========================== */
+
+.portfolio-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 20px 10px 20px;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.photo-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.portfolio-header h1 {
+  font-size: 3rem;
+  margin: 0 0 2px 0;
+  color: #fff;
+}
+
+.portfolio-header h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #d6d6d6;
+  margin: 0;
+}
+
+/* ===========================
+   BLOCO 2 — BIO / SOBRE
+=========================== */
+
+.portfolio-bio {
+  background: #0a0a0a;
+  color: #e4e4e4;
+  padding: 20px 20px 10px;
+}
+
+.portfolio-bio .bio-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.portfolio-bio p {
+  font-size: 1rem;
+  line-height: 1.62;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+/* ===========================
+   BLOCO 3 — FILMES
+=========================== */
+
+.portfolio-filmes {
+  padding: 0px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.portfolio-filmes h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.portfolio-filmes .videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.portfolio-filmes iframe {
+  flex: 1 1 320px;
+  max-width: 360px;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ===========================
+   BLOCO 4 — PRÓXIMOS LANÇAMENTOS
+=========================== */
+
+.portfolio-coming {
+  padding: 60px 20px;
+  background: #111;
+}
+
+.portfolio-coming h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.portfolio-coming .coming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.coming-card {
+  background: #222;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === BACKGROUNDS === */
+/* === NOVAS CLASSES EXCLUSIVAMENTE PEDIDAS === */
+.player1-card {
+  background-image: url("img/player-1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -310px; /* ajuste aqui */
+}
+
+.amor-card {
+  background-image: url("img/trago-seu-amor.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -60px; /* ajuste aqui */
+}
+
+/* mantém o texto legível */
+.coming-card h3,
+.coming-card p {
+  position: relative;
+  z-index: 2;
+}
+
+/* overlay com contraste melhorado */
+.coming-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* CONTRASTE MELHORADO */
+  z-index: 1;
+}
+
+/* ===========================
+   BLOCO 5 — CONTATO
+=========================== */
+
+.portfolio-contact {
+  padding: 5px 20px;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.portfolio-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.portfolio-contact p {
+  font-size: 1rem;
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-email:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media (max-width: 768px) {
+  .portfolio-header {
+    padding: 100px 20px 10px 20px;
+  }
+
+  .photo-wrapper img {
+    object-position: 85% 10%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio-header img {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-header img {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-header {
+    padding: 100px 20px 20px 20px;
+  }
+  .portfolio-header img {
+    max-width: 240px;
+  }
+  .portfolio-filmes iframe {
+    max-width: 100%;
+    height: 180px;
+  }
+  .coming-card {
+    padding: 16px;
+  }
+}

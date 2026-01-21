@@ -1,0 +1,90 @@
+/* ===========================
+   PÁGINA DE PROJETO INDIVIDUAL
+=========================== */
+.projeto-individual {
+  background: #000;
+  color: #fff;
+  padding: 160px 20px 80px; /* espaço para o header fixo */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.projeto-container {
+  max-width: 900px;
+  width: 100%;
+  background: #111;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projeto-img img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+.projeto-container h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* DETALHES DO PROJETO */
+.projeto-detalhes p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.projeto-detalhes p:last-of-type {
+  margin-bottom: 20px; /* espaço entre duração e descrição */
+}
+
+/* DESCRIÇÃO */
+.projeto-descricao p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* LISTA DE ITENS */
+.projeto-itens {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-email:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .projeto-container {
+    padding: 20px;
+  }
+
+  .projeto-container h1 {
+    font-size: 2rem;
+  }
+
+  .projeto-descricao p,
+  .projeto-itens {
+    font-size: 0.95rem;
+  }
+}

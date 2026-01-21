@@ -1,0 +1,192 @@
+/* ===========================
+   SERVIÇOS — BLOCO 1 INTRODUÇÃO
+=========================== */
+.servicos-intro {
+  padding: 150px 40px 5px;
+  background: #000;
+  color: #fff;
+  text-align: left;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; /* alinhamento à esquerda */
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px; /* espaço entre título e parágrafo */
+}
+
+.intro-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1px; /* reduz espaço antes dos cards */
+}
+
+/* ===========================
+   SERVIÇOS — BLOCO 2 CARDS
+   =========================== */
+
+.servicos-cards {
+  padding: 120px 40px; /* aumenta ainda mais o espaçamento da seção */
+  background: #111;
+  text-align: left;
+}
+
+.servicos-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* garante 3 cards por linha em telas grandes */
+  gap: 35px; /* aumenta o espaçamento entre cards */
+  max-width: 1400px; /* largura total da seção */
+  margin: 0 auto;
+}
+
+.servico-card {
+  background: #000;
+  border: 2px solid #fff;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px; /* aumentado de 380px para 500px */
+}
+
+/* camada de fundo branco separada */
+.servico-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.servico-card:hover::before {
+  opacity: 0.95;
+}
+
+/* conteúdo acima da camada branca */
+.servico-card h3,
+.servico-card p {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.servico-card:hover h3,
+.servico-card:hover p {
+  color: #000; /* texto escuro sobre fundo branco */
+}
+
+/* botão sempre visível */
+.btn-orcamento {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #fff; /* borda branca sempre visível */
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff; /* texto branco por padrão */
+  margin-top: 15px;
+  align-self: flex-start;
+  position: relative;
+  z-index: 2;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* hover sobre o card e botão */
+.servico-card:hover .btn-orcamento {
+  background: #000; /* fundo escuro */
+  color: #fff; /* texto branco */
+  transform: translateY(-3px);
+}
+
+.btn-orcamento:hover {
+  background: #000; /* fundo escuro */
+  color: #fff; /* texto branco ao passar o mouse */
+  transform: translateY(-3px);
+}
+
+.servico-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-email:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 1024px) {
+  .servicos-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .servicos-container {
+    grid-template-columns: 1fr; /* 1 por linha em celulares */
+  }
+}
+
+/* ===========================
+   RESPONSIVO - SERVICOS.CSS
+=========================== */
+@media (max-width: 1024px) {
+  .servicos-container {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .servico-card {
+    min-height: 450px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .servico-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .servicos-intro h2 {
+    font-size: 2rem;
+  }
+
+  .servicos-intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .servicos-intro p {
+    font-size: 0.95rem;
+  }
+
+  .servico-card {
+    padding: 20px;
+  }
+}
